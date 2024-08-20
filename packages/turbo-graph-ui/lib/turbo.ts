@@ -39,7 +39,7 @@ async function executeCommand(
     if (filter) {
       const filterParts = filter.split(',')
       for (const part of filterParts) {
-        args.push(`--filter=${part}`)
+        args.push(`--filter=${part.trim()}`)
       }
     }
     const { stdout } = await execa(
